@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ParentMasterPage.master.cs"
+    Inherits="ParentMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+        #form1
+        {
+            height: 644px;
+        }
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+         }
+        .style6
+        {
+            height: 216px;
+            width: 170px;
+        }
+        .style7
+        {
+            height: 312px;
+            width: 170px;
+        }
+        </style> 
+</head>
+<body>
+<asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                        SiteMapProvider="MusicManiaSiteMap" />
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td>
+                <asp:Label ID="lblogo" runat="server" BackColor="#993333" Font-Bold="True" Font-Names="Gigi"
+                    Font-Size="XX-Large" ForeColor="Black" Height="100%" Text="MusicMania.com"></asp:Label>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/image.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Bold="True">
+                </asp:SiteMapPath>
+                &nbsp;&nbsp;&nbsp;&nbsp;<hr style="color: #993333; height: 2px" />
+            </td>
+        </tr>
+    </table>
+    <table class="style1" border="1">
+        <tr>
+            <td align="left" valign="top" bgcolor="#993333" class="style6">
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
+                    Font-Bold="True" ForeColor="Black">
+                </asp:TreeView>
+                        </td>
+            <td align="left" class="style2" valign="top" rowspan="2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+            </td>
+            <td rowspan="2" align="center" bgcolor="#993333" valign="top" width="20%">
+                <br />
+                <asp:Label ID="lbdiscount" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Cambria"
+                    Font-Size="Medium" Font-Underline="True" Height="40px" Text="Discount Available"
+                    Width="153px"></asp:Label>
+                <br />
+                <br />
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/image12.JPG" />
+                <br />
+                <br />
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/image13.jpg" Width="95px" />
+                <br />
+                <br />
+                <asp:Image ID="Image5" runat="server" ImageUrl="~/Images/image15.jpeg" Width="95px" />
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top" bgcolor="#993333" class="style7">
+                <br />
+                <asp:Label ID="lbnewalbum" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Cambria"
+                    Font-Size="Large" Font-Underline="True" Text="New in Store"></asp:Label>
+                <br />
+                <br />
+                <asp:Label ID="lbaname1" runat="server" Text="Salute DVD" Font-Size="Medium">
+                </asp:Label>
+                <br />
+                <br />
+                <asp:Label ID="lbaname2" runat="server" Text="Drum Circle CD/DVD" Font-Size="Medium">
+                </asp:Label>
+                <br />
+                <br />
+                <asp:Label ID="lbaname3" runat="server" Text="Death Magnetic DVD" Font-Size="Medium">
+                </asp:Label>
+                <br />
+                <br />
+                <asp:Label ID="lbaname4" runat="server" Text="Back to Black CD" Font-Size="Medium"></asp:Label>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
